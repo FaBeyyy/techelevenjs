@@ -14,7 +14,7 @@ class HelloClass extends Component {
         };
     }
     render() {
-        return tech.createElement('div', this.props, `hi from class ${name}, state changed: ${this.state}`)
+        return tech.createElement('div', {className: hello-class, onClick:...}, `hi from class ${name}, state changed: ${this.state}`)
     }
 }
 const RenderAbleHelloClass = tech.createElement(HelloClass, props, null);
