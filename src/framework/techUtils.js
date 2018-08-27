@@ -21,6 +21,24 @@ export function createDocumentParentElement(element, props) {
         if (props.hasOwnProperty('onClick')) {
             addElement.onclick = props.onClick;
         }
+        if (props.hasOwnProperty('className')) {
+            addElement.className = props.className;
+        }
+        if (props.hasOwnProperty('id')) {
+            addElement.id = props.id;
+        }
+        if (props.hasOwnProperty('href')) {
+            addElement.href = props.href;
+        }
+        if (props.hasOwnProperty('src')) {
+            addElement.src = props.src;
+        }
+        if (props.hasOwnProperty('style')) {
+            addElement.style = props.style;
+        }
+        if (props.hasOwnProperty('title')) {
+            addElement.title = props.title;
+        }
     }
     return addElement;
 }

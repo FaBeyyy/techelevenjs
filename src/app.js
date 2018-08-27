@@ -25,7 +25,7 @@ class HelloClass extends Component {
     render() {
         this.changeState();
         const {name} = this.props; 
-        return tech.createElement('div', {onClick: (e) => console.log(e)}, `hi from class ${name}, state changed: ${this.state.changed}`)
+        return tech.createElement('div', {onClick: (e) => console.log(e), className: 'text-container'}, `hi from class ${name}, state changed: ${this.state.changed}`)
     }
 } 
 
