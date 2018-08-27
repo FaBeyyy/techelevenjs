@@ -1,4 +1,4 @@
-import { isClass, isFunc, isObject, isString } from './techUtils.js';
+import { isClass, isFunc, isObject, isString, createDocumentParentElement} from './techUtils.js';
 import { techDOM } from './techInit.js';
 
 class Tech {
@@ -28,7 +28,7 @@ class Tech {
       return element();
     }
 
-    const addElement = document.createElement(element);
+    const addElement = createDocumentParentElement(element, props);
 
     children.forEach(child => {
       // support html elements 

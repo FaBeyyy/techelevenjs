@@ -4,7 +4,7 @@ import { Component } from './framework/component.js';
  
 
 const HelloComponent = () => {
-    return tech.createElement('div', null, `hi from component`);
+    return tech.createElement('div', {onClick: (e) => console.log("hi from onclick")}, `hi from component`);
 }
 
 class HelloClass extends Component {
@@ -24,10 +24,10 @@ class HelloClass extends Component {
 
     render() {
         this.changeState();
-        const {name} = this.props;
-        return tech.createElement('div', this.props, `hi from class ${name}, state changed: ${this.state.changed}`)
+        const {name} = this.props; 
+        return tech.createElement('div', {onClick: (e) => console.log(e)}, `hi from class ${name}, state changed: ${this.state.changed}`)
     }
-}
+} 
 
 //const helloWorld2 = Hello();
 //const helloWorld = tech.createElement(Hello, null, null);
