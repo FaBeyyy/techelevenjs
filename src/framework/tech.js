@@ -13,6 +13,7 @@ class Tech {
       // support classes
       let elementObj = null;
 
+      // check if class has already been instanced 
       this.activeClasses.forEach(active => {
         if (active.constructor.name === element.name) {
             elementObj = active;
@@ -22,6 +23,7 @@ class Tech {
         elementObj = new element(props);
         this.activeClasses.push(elementObj);
       }
+      // call the class render function
       return elementObj.render();
     }
     if (isFunc(element)) {
